@@ -23,6 +23,7 @@ public class UserService {
         User user = userStorage.getUser(id);
         User friend = userStorage.getUser(friendId); //проверим наличие друга по id
         user.addFriend(friendId);
+        friend.addFriend(id);
         return user;
     }
 
@@ -30,6 +31,7 @@ public class UserService {
         User user = userStorage.getUser(id);
         User friend = userStorage.getUser(friendId); //проверим наличие друга по id
         user.removeFriend(friendId);
+        friend.removeFriend(id);
         return user;
     }
 
