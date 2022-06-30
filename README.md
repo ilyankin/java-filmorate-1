@@ -6,32 +6,32 @@ Template repository for Filmorate project.
 
 Примеры запросов:
 
-Все фильмы
-SELECT *
-FROM FILMS
+Все фильмы  
+SELECT *  
+FROM FILMS  
 
-Топ 5 популярных фильмов
-SELECT *
-FROM FILMS
-ORDER BY LIKES DESC
-LIMIT 5
+Топ 5 популярных фильмов  
+SELECT *  
+FROM FILMS  
+ORDER BY LIKES DESC  
+LIMIT 5  
 
-Все юзеры
-SELECT *
-FROM USERS
+Все юзеры  
+SELECT *  
+FROM USERS  
 
-Друзья юзера 1
-SELECT *
-FROM FRIENDSHIPS
-WHERE USER_ID = 1
+Друзья юзера 1  
+SELECT *  
+FROM FRIENDSHIPS  
+WHERE USER_ID = 1  
 
-Общий друзья юзеров 1 и 2
-SELECT *
-FROM FRIENDSHIPS
-WHERE USER_ID = 1
-  AND FRIEND_ID IN (SELECT FRIEND_ID FROM FRIENDSHIPS WHERE USER_ID = 2)
+Общий друзья юзеров 1 и 2  
+SELECT *  
+FROM FRIENDSHIPS  
+WHERE USER_ID = 1  
+  AND FRIEND_ID IN (SELECT FRIEND_ID FROM FRIENDSHIPS WHERE USER_ID = 2)  
 
-Лайки фильму с айди 1
-SELECT *
-FROM LIKES
-WHERE film_id = 1
+Лайки фильму с айди 1  
+SELECT *  
+FROM LIKES  
+WHERE film_id = 1  
